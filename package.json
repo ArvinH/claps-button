@@ -1,7 +1,7 @@
 {
   "name": "claps-button",
   "version": "0.0.1",
-  "description": "Stencil Component Starter",
+  "description": "claps-button web component built by Stencil",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
   "es2015": "dist/esm/index.mjs",
@@ -30,5 +30,6 @@
     "jest-cli": "24.9.0",
     "puppeteer": "1.20.0"
   },
+  "author": "ArvinH",
   "license": "MIT"
 }
