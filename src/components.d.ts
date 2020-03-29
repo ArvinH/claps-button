@@ -11,7 +11,8 @@ import { HTMLStencilElement, JSXBase } from '@stencil/core/internal';
 
 export namespace Components {
   interface ClapsButton {
-    'ani': () => Promise<void>;
+    'color': string;
+    'size': string;
   }
 }
 
@@ -29,7 +30,10 @@ declare global {
 }
 
 declare namespace LocalJSX {
-  interface ClapsButton {}
+  interface ClapsButton {
+    'color'?: string;
+    'size'?: string;
+  }
 
   interface IntrinsicElements {
     'claps-button': ClapsButton;

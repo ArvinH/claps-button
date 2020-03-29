@@ -1,4 +1,4 @@
-import { Component, Element, Method, State, Listen, h, Host } from '@stencil/core';
+import { Component, Element, Method, Prop, State, Listen, h, Host } from '@stencil/core';
 
 @Component({
   tag: 'claps-button',
@@ -8,20 +8,23 @@ import { Component, Element, Method, State, Listen, h, Host } from '@stencil/cor
 export class MyComponent {
   @Element() el: HTMLElement;
   @State() count: number = 0;
+  @Prop() color: string;
+  @Prop() size: string;
 
   @Listen('click', { capture: true })
 
   handleClick(e) {
     e.stopPropagation();
     this.count = this.count + 1;
-    this.ani();
+    window.requestAnimationFrame(this.ani.bind(this));
   }
 
-  @Method()
-  async ani() {
+  ani() {
     const root = document.createDocumentFragment();
-    const centreElmRectX = 15;
-    const centreElmRectY = 25;
+    const rootElm  = this.el.shadowRoot.querySelector('#root');
+    const rootBoundingBox = rootElm.getBoundingClientRect();
+    const centreElmRectX = Math.floor(rootBoundingBox.width / 2) - 10;
+    const centreElmRectY = Math.floor(rootBoundingBox.height / 2);
     const generateChi = () => {
       const randomNum = 20;
       const chiArray = [];
@@ -66,20 +69,27 @@ export class MyComponent {
       root.appendChild(chi);
     })
 
-    const rootElm  = this.el.shadowRoot.querySelector('#root');
     rootElm.appendChild(root);
   }
 
   render() {
     return (
       <Host>
-        <div class="counter">{this.count}</div>
+        <div class="counter" style={{
+          color: this.color,
+          borderColor: this.color,
+          width: this.size || '3rem',
+          height: this.size || '3rem',
+        }}>{this.count}</div>
         <div
           id="root"
           class="claps-btn-container"
           data-count={this.count}
           onClick={this.handleClick}
           style={{
+            width: this.size || '3rem',
+            height: this.size || '3rem',
+            fontSize: this.size || '3rem',
             textShadow: `1px 0px ${(
               this.count < 20 ? this.count : 20
             ).toFixed(2)}px red`,
