@@ -2,7 +2,12 @@
 
 # Claps button web component 
 
-![demo](./statics/web-component-claps.gif)
+<p class="codepen" data-height="383" data-theme-id="29194" data-default-tab="result" data-user="arvin0731" data-slug-hash="ExjGBNq" style="height: 383px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="claps-button web component">
+  <span>See the Pen <a href="https://codepen.io/arvin0731/pen/ExjGBNq">
+  claps-button web component</a> by Arvin (<a href="https://codepen.io/arvin0731">@arvin0731</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
 
 # Built by Stencil
 
