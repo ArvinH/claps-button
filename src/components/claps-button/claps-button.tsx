@@ -1,4 +1,4 @@
-import { Component, Element, Method, Prop, State, Listen, h, Host } from '@stencil/core';
+import { Component, Element, Prop, State, Listen, h, Host } from '@stencil/core';
 
 @Component({
   tag: 'claps-button',
