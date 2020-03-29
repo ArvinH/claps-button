@@ -41,7 +41,6 @@ npm test
 
 ### Script tag
 
-- [Publish to NPM](https://docs.npmjs.com/getting-started/publishing-npm-packages)
 - Put a script tag similar to this `<script src='https://unpkg.com/claps-button@0.0.1/dist/mycomponent.js'></script>` in the head of your index.html
 - Then you can use the element anywhere in your template, JSX, html etc
 
