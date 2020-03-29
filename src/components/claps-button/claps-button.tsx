@@ -81,6 +81,9 @@ export class MyComponent {
           data-count={this.count}
           onClick={this.handleClick}
           style={{
+            textShadow: `1px 0px ${(
+              this.count < 20 ? this.count : 20
+            ).toFixed(2)}px red`,
             filter: `grayscale(${(
               1 - this.count / 20
             ).toFixed(2)})`
