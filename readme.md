@@ -10,15 +10,7 @@
 
 ![demo](statics/web-component-claps.gif)
 
-# Built by Stencil
-
-Stencil is a compiler for building fast web apps using Web Components.
-
-Stencil combines the best concepts of the most popular frontend frameworks into a compile-time rather than run-time tool.  Stencil takes TypeScript, JSX, a tiny virtual DOM layer, efficient one-way data binding, an asynchronous rendering pipeline (similar to React Fiber), and lazy-loading out of the box, and generates 100% standards-based Web Components that run in any browser supporting the Custom Elements v1 spec.
-
-Stencil components are just Web Components, so they work in any major framework or with no framework at all.
-
-## Getting Started
+## Develop
 
 ```bash
 npm install
@@ -39,10 +31,20 @@ npm test
 
 ## Using this component
 
+
 ### Script tag
 
 - Put a script tag similar to this `<script src='https://unpkg.com/claps-button@0.0.1/dist/mycomponent.js'></script>` in the head of your index.html
 - Then you can use the element anywhere in your template, JSX, html etc
+
+```html
+<!--in your index.html-->
+<script src='https://unpkg.com/claps-button@0.0.1/dist/mycomponent.js'></script>
+<!-- // other code -->
+
+<!-- Two props: color and size -->
+<claps-button size="5rem" color="#ffe000"></claps-button>
+```
 
 ### Node Modules
 - Run `npm install claps-button --save`
@@ -53,3 +55,11 @@ npm test
 - Run `npm install claps-button --save`
 - Add an import to the npm packages `import claps-button;`
 - Then you can use the element anywhere in your template, JSX, html etc
+
+# Built by Stencil
+
+Stencil is a compiler for building fast web apps using Web Components.
+
+Stencil combines the best concepts of the most popular frontend frameworks into a compile-time rather than run-time tool.  Stencil takes TypeScript, JSX, a tiny virtual DOM layer, efficient one-way data binding, an asynchronous rendering pipeline (similar to React Fiber), and lazy-loading out of the box, and generates 100% standards-based Web Components that run in any browser supporting the Custom Elements v1 spec.
+
+Stencil components are just Web Components, so they work in any major framework or with no framework at all.
