@@ -10,13 +10,22 @@ export class MyComponent {
   @State() count: number = 0;
   @Prop() color: string;
   @Prop() size: string;
+  @Prop() preserve: boolean;
 
   @Listen('click', { capture: true })
 
   handleClick(e) {
     e.stopPropagation();
     this.count = this.count + 1;
+    if (this.preserve) {
+      localStorage.setItem(`claps-wc-${location.pathname}`, `${this.count}`);
+    }
     window.requestAnimationFrame(this.ani.bind(this));
+  }
+
+  componentWillLoad() {
+    if (!this.preserve) return;
+    this.count = +localStorage.getItem(`claps-wc-${location.pathname}`);
   }
 
   ani() {

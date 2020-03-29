@@ -42,8 +42,14 @@ npm test
 <script src='https://unpkg.com/claps-button@1.0.5/dist/claps-button.js'></script>
 <!-- // other code -->
 
-<!-- Two props: color and size -->
+<!-- You can change size and color by passing them as props -->
 <claps-button size="5rem" color="#ffe000"></claps-button>
+
+<!--
+  If you want to perserve the claps number, you can pass `preserve` as props, it'll save to localstorage with `claps-wc-${location.pathname}` as key.
+-->
+
+<claps-button size="3rem" preserve ></claps-button>
 ```
 
 ### Node Modules
