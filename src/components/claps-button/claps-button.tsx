@@ -29,20 +29,19 @@ export class MyComponent {
         const chi = document.createElement("div");
         chi.className = 'star';
         // calculate circle x-y
-        const centre = [centreElmRectX, centreElmRectY];
         let radius = 10; // Math.floor(Math.random() * 100) + 10;
         const angle = 360 / randomNum * i;
         // x1   =   x0   +   r   *   cos(angle   *   3.14   /180   )
         // y1   =   y0   +   r   *   sin(angle   *   3.14   /180   )
-        const initXpos = centre[0] + radius * Math.sin(angle * 3.14/180);
-        const initYpos = centre[1] + radius * Math.cos(angle * 3.14/180);
+        const initXpos = centreElmRectX + radius * Math.sin(angle * 3.14/180);
+        const initYpos = centreElmRectY + radius * Math.cos(angle * 3.14/180);
         const randomDuration = Math.floor(Math.random() * 20) * 0.08;
         chi.style.left = `${initXpos}px`;
         chi.style.top = `${initYpos}px`;
         chi.style.opacity = '0';
         radius = 100;
-        const randomXpos = centre[0] + radius * Math.sin(angle * 3.14/180);
-        const randomYpos = centre[1] + radius * Math.cos(angle * 3.14/180);
+        const randomXpos = centreElmRectX + radius * Math.sin(angle * 3.14/180);
+        const randomYpos = centreElmRectY + radius * Math.cos(angle * 3.14/180);
         const chiAnimateObj = chi.animate([
             // keyframes
             { transform: `translate(${randomXpos}px, ${randomYpos}px)`, scale: 1, opacity: 0 },
