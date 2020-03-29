@@ -1,0 +1,31 @@
+.claps-btn-container {
+  cursor: pointer;
+  font-size: 3rem;
+  width: 3rem;
+  height: 3rem;
+  &::selection {
+      color: none;
+      background: none;
+  }
+};
+
+.counter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 3rem;
+  height: 3rem;
+  background-color: #FFFFFF;
+  color: #1bca1b;
+  border-radius: 50%;
+  border: 1px solid #1bca1b;
+};
+
+.star {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #fff;
+  box-shadow: 0 0 20px 8px rgba(252,255,168,0.4);
+  position: absolute;
+}
