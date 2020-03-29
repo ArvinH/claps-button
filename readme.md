@@ -39,16 +39,18 @@ npm test
 
 ```html
 <!--in your index.html-->
-<script src='https://unpkg.com/claps-button@1.0.6/dist/claps-button.js'></script>
+<script src='https://unpkg.com/claps-button@1.0.7/dist/claps-button.js'></script>
 <!-- // other code -->
+```
+**You can change size and color by passing them as props**
 
-<!-- You can change size and color by passing them as props -->
+```html
 <claps-button size="5rem" color="#ffe000"></claps-button>
+```
 
-<!--
-  If you want to perserve the claps number, you can pass `preserve` as props, it'll save to localstorage with `claps-wc-${location.pathname}` as key.
--->
+**If you want to perserve the claps number, you can pass `preserve` as props, it'll save to localstorage with `claps-wc-${location.pathname}` as key.**
 
+```html
 <claps-button size="3rem" preserve ></claps-button>
 ```
 
