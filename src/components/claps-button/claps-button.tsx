@@ -21,7 +21,7 @@ export class MyComponent {
 
   ani() {
     const root = document.createDocumentFragment();
-    const rootElm  = this.el.shadowRoot.querySelector('#root');
+    const rootElm  = this.el.shadowRoot.querySelector('.claps-btn-container');
     const rootBoundingBox = rootElm.getBoundingClientRect();
     const centreElmRectX = Math.floor(rootBoundingBox.width / 2) - 10;
     const centreElmRectY = Math.floor(rootBoundingBox.height / 2);
@@ -82,7 +82,6 @@ export class MyComponent {
           height: this.size || '3rem',
         }}>{this.count}</div>
         <div
-          id="root"
           class="claps-btn-container"
           data-count={this.count}
           onClick={this.handleClick}
