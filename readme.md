@@ -39,7 +39,7 @@ npm test
 
 ```html
 <!--in your index.html-->
-<script src='https://unpkg.com/claps-button@1.0.4/dist/claps-button.js'></script>
+<script src='https://unpkg.com/claps-button@1.0.5/dist/claps-button.js'></script>
 <!-- // other code -->
 
 <!-- Two props: color and size -->
