@@ -8,6 +8,8 @@
   on <a href="https://codepen.io">CodePen</a>.</span>
 </p>
 
+![demo](statics/web-component-claps.gif)
+
 # Built by Stencil
 
 Stencil is a compiler for building fast web apps using Web Components.
