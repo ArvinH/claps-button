@@ -7,7 +7,6 @@
   claps-button web component</a> by Arvin (<a href="https://codepen.io/arvin0731">@arvin0731</a>)
   on <a href="https://codepen.io">CodePen</a>.</span>
 </p>
-<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
 
 # Built by Stencil
 
