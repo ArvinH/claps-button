@@ -39,6 +39,7 @@ export class MyComponent {
         const randomDuration = Math.floor(Math.random() * 20) * 0.08;
         chi.style.left = `${initXpos}px`;
         chi.style.top = `${initYpos}px`;
+        chi.style.opacity = '0';
         radius = 100;
         const randomXpos = centre[0] + radius * Math.sin(angle * 3.14/180);
         const randomYpos = centre[1] + radius * Math.cos(angle * 3.14/180);
