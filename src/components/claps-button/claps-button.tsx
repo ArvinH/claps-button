@@ -32,8 +32,8 @@ export class MyComponent {
         const centre = [centreElmRectX, centreElmRectY];
         let radius = 10; // Math.floor(Math.random() * 100) + 10;
         const angle = 360 / randomNum * i;
-        // x1   =   x0   +   r   *   cos(ao   *   3.14   /180   )
-        // y1   =   y0   +   r   *   sin(ao   *   3.14   /180   )
+        // x1   =   x0   +   r   *   cos(angle   *   3.14   /180   )
+        // y1   =   y0   +   r   *   sin(angle   *   3.14   /180   )
         const initXpos = centre[0] + radius * Math.sin(angle * 3.14/180);
         const initYpos = centre[1] + radius * Math.cos(angle * 3.14/180);
         const randomDuration = Math.floor(Math.random() * 20) * 0.08;
