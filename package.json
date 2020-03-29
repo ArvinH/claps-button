@@ -1,6 +1,6 @@
 {
   "name": "claps-button",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "claps-button web component built by Stencil",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
