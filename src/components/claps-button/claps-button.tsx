@@ -35,14 +35,14 @@ export class MyComponent {
     const centreElmRectX = Math.floor(rootBoundingBox.width / 2) - 10;
     const centreElmRectY = Math.floor(rootBoundingBox.height / 2);
     const generateChi = () => {
-      const randomNum = 20;
+      const numberOfChi = 20;
       const chiArray = [];
-      for (let i = 0; i < randomNum; i++) {
+      for (let i = 0; i < numberOfChi; i++) {
         const chi = document.createElement("div");
         chi.className = 'star';
         // calculate circle x-y
         let radius = 10; // Math.floor(Math.random() * 100) + 10;
-        const angle = 360 / randomNum * i;
+        const angle = 360 / numberOfChi * i;
         // x1   =   x0   +   r   *   cos(angle   *   3.14   /180   )
         // y1   =   y0   +   r   *   sin(angle   *   3.14   /180   )
         const initXpos = centreElmRectX + radius * Math.sin(angle * 3.14/180);
@@ -52,11 +52,11 @@ export class MyComponent {
         chi.style.top = `${initYpos}px`;
         chi.style.opacity = '0';
         radius = 100;
-        const randomXpos = centreElmRectX + radius * Math.sin(angle * 3.14/180);
-        const randomYpos = centreElmRectY + radius * Math.cos(angle * 3.14/180);
+        const afterXpos = centreElmRectX + radius * Math.sin(angle * 3.14/180);
+        const afterYpos = centreElmRectY + radius * Math.cos(angle * 3.14/180);
         const chiAnimateObj = chi.animate([
             // keyframes
-            { transform: `translate(${randomXpos}px, ${randomYpos}px)`, scale: 1, opacity: 0 },
+            { transform: `translate(${afterXpos}px, ${afterYpos}px)`, scale: 1, opacity: 0 },
             { opacity: 1 },
             { transform: 'translate(0, 0)', scale: 0.3, opacity: 0.3 }
           ], {
