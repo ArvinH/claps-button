@@ -20,7 +20,7 @@ export class MyComponent {
     if (this.preserve) {
       localStorage.setItem(`claps-wc-${location.pathname}`, `${this.count}`);
     }
-    window.requestAnimationFrame(this.ani.bind(this));
+    window.requestAnimationFrame(this.runAnimation.bind(this));
   }
 
   componentWillLoad() {
@@ -28,7 +28,7 @@ export class MyComponent {
     this.count = +localStorage.getItem(`claps-wc-${location.pathname}`);
   }
 
-  ani() {
+  runAnimation() {
     const root = document.createDocumentFragment();
     const rootElm  = this.el.shadowRoot.querySelector('.claps-btn-container');
     const rootBoundingBox = rootElm.getBoundingClientRect();
