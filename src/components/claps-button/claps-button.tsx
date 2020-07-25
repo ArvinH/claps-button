@@ -10,6 +10,7 @@ export class MyComponent {
   @State() count: number = 0;
   @Prop() color: string;
   @Prop() size: string;
+  @Prop() emoji: string;
   @Prop() preserve: boolean;
   @Event() clapDone: EventEmitter;
 
@@ -108,7 +109,7 @@ export class MyComponent {
             ).toFixed(2)})`
           }}
         >
-          👏
+          {this.emoji || '👏'}
         </div>
       </Host>
     );

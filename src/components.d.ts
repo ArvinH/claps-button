@@ -12,6 +12,7 @@ import { HTMLStencilElement, JSXBase } from '@stencil/core/internal';
 export namespace Components {
   interface ClapsButton {
     'color': string;
+    'emoji': string;
     'preserve': boolean;
     'size': string;
   }
@@ -33,6 +34,7 @@ declare global {
 declare namespace LocalJSX {
   interface ClapsButton {
     'color'?: string;
+    'emoji'?: string;
     'onClapDone'?: (event: CustomEvent<any>) => void;
     'preserve'?: boolean;
     'size'?: string;

@@ -73,6 +73,14 @@ export default function App() {
 
 [![Edit webcomponent-test-react](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/webcomponent-test-react-w7lyv?fontsize=14&hidenavigation=1&theme=dark)
 
+**Change emoji is also possible**
+
+```html
+<claps-button size="3rem" preserve emoji="🔥"></claps-button>
+```
+
+![demo](https://i.imgur.com/OpC3xLy.png)
+
 ### Node Modules
 - Run `npm install claps-button --save`
 - Put a script tag similar to this `<script src='node_modules/claps-button/dist/mycomponent.js'></script>` in the head of your index.html
