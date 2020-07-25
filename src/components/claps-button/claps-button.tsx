@@ -11,12 +11,16 @@ export class MyComponent {
   @Prop() color: string;
   @Prop() size: string;
   @Prop() preserve: boolean;
+  @Prop() callback: (count: number) => {};
 
   @Listen('click', { capture: true })
 
   handleClick(e) {
     e.stopPropagation();
     this.count = this.count + 1;
+    if (this.callback) {
+      this.callback(this.count);
+    }
     if (this.preserve) {
       localStorage.setItem(`claps-wc-${location.pathname}`, `${this.count}`);
     }

@@ -11,6 +11,7 @@ import { HTMLStencilElement, JSXBase } from '@stencil/core/internal';
 
 export namespace Components {
   interface ClapsButton {
+    'callback': (count: number) => {};
     'color': string;
     'preserve': boolean;
     'size': string;
@@ -32,6 +33,7 @@ declare global {
 
 declare namespace LocalJSX {
   interface ClapsButton {
+    'callback'?: (count: number) => {};
     'color'?: string;
     'preserve'?: boolean;
     'size'?: string;
