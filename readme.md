@@ -54,6 +54,25 @@ npm test
 <claps-button size="3rem" preserve ></claps-button>
 ```
 
+**claps-button emit an custom event called `clapDone` when you click it, you can listen to that event to get the current count**
+
+```jsx
+export default function App() {
+  document.addEventListener("clapDone", e => {
+    console.log(e.detail.count);
+  });
+  return (
+    <div className="App">
+      <div className="container">
+        <claps-button size="4rem" color="#ffe000" preserve />
+      </div>
+    </div>
+  );
+}
+```
+
+[![Edit webcomponent-test-react](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/webcomponent-test-react-w7lyv?fontsize=14&hidenavigation=1&theme=dark)
+
 ### Node Modules
 - Run `npm install claps-button --save`
 - Put a script tag similar to this `<script src='node_modules/claps-button/dist/mycomponent.js'></script>` in the head of your index.html
