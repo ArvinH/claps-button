@@ -34,12 +34,12 @@ npm test
 
 ### Script tag
 
-- Put a script tag similar to this `<script src='https://unpkg.com/claps-button@1.0.9/dist/mycomponent.js'></script>` in the head of your index.html
+- Put a script tag similar to this `<script src='https://unpkg.com/claps-button@1.1.2/dist/mycomponent.js'></script>` in the head of your index.html
 - Then you can use the element anywhere in your template, JSX, html etc
 
 ```html
 <!--in your index.html-->
-<script src='https://unpkg.com/claps-button@1.0.9/dist/claps-button.js'></script>
+<script src='https://unpkg.com/claps-button@1.1.2/dist/claps-button.js'></script>
 <!-- // other code -->
 ```
 **You can change size and color by passing them as props**
