@@ -7,12 +7,18 @@
 
 ## Properties
 
-| Property   | Attribute  | Description | Type                    | Default     |
-| ---------- | ---------- | ----------- | ----------------------- | ----------- |
-| `callback` | --         |             | `(count: number) => {}` | `undefined` |
-| `color`    | `color`    |             | `string`                | `undefined` |
-| `preserve` | `preserve` |             | `boolean`               | `undefined` |
-| `size`     | `size`     |             | `string`                | `undefined` |
+| Property   | Attribute  | Description | Type      | Default     |
+| ---------- | ---------- | ----------- | --------- | ----------- |
+| `color`    | `color`    |             | `string`  | `undefined` |
+| `preserve` | `preserve` |             | `boolean` | `undefined` |
+| `size`     | `size`     |             | `string`  | `undefined` |
+
+
+## Events
+
+| Event      | Description | Type               |
+| ---------- | ----------- | ------------------ |
+| `clapDone` |             | `CustomEvent<any>` |
 
 
 ----------------------------------------------

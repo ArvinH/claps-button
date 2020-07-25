@@ -1,4 +1,4 @@
-import { Component, Element, Prop, State, Listen, h, Host } from '@stencil/core';
+import { Component, Element, Event, EventEmitter, Prop, State, Listen, h, Host } from '@stencil/core';
 
 @Component({
   tag: 'claps-button',
@@ -11,16 +11,14 @@ export class MyComponent {
   @Prop() color: string;
   @Prop() size: string;
   @Prop() preserve: boolean;
-  @Prop() callback: (count: number) => {};
+  @Event() clapDone: EventEmitter;
 
   @Listen('click', { capture: true })
 
   handleClick(e) {
     e.stopPropagation();
     this.count = this.count + 1;
-    if (this.callback) {
-      this.callback(this.count);
-    }
+    this.clapDone.emit({ count: this.count });
     if (this.preserve) {
       localStorage.setItem(`claps-wc-${location.pathname}`, `${this.count}`);
     }
