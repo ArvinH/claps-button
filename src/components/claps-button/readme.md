@@ -7,11 +7,13 @@
 
 ## Properties
 
-| Property   | Attribute  | Description | Type      | Default     |
-| ---------- | ---------- | ----------- | --------- | ----------- |
-| `color`    | `color`    |             | `string`  | `undefined` |
-| `preserve` | `preserve` |             | `boolean` | `undefined` |
-| `size`     | `size`     |             | `string`  | `undefined` |
+| Property       | Attribute      | Description | Type      | Default     |
+| -------------- | -------------- | ----------- | --------- | ----------- |
+| `color`        | `color`        |             | `string`  | `undefined` |
+| `defaultcount` | `defaultcount` |             | `number`  | `undefined` |
+| `emoji`        | `emoji`        |             | `string`  | `undefined` |
+| `preserve`     | `preserve`     |             | `boolean` | `undefined` |
+| `size`         | `size`         |             | `string`  | `undefined` |
 
 
 ## Events

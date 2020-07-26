@@ -12,6 +12,7 @@ export class MyComponent {
   @Prop() size: string;
   @Prop() emoji: string;
   @Prop() preserve: boolean;
+  @Prop() defaultcount: number;
   @Event() clapDone: EventEmitter;
 
   @Listen('click', { capture: true })
@@ -28,7 +29,9 @@ export class MyComponent {
 
   componentWillLoad() {
     if (!this.preserve) return;
-    this.count = +localStorage.getItem(`claps-wc-${location.pathname}`);
+    this.count = Number.isNaN(+this.defaultcount) ?
+      // localStorage will return null when no item, +null will be 0
+      +localStorage.getItem(`claps-wc-${location.pathname}`) : this.defaultcount;
   }
 
   runAnimation() {

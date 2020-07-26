@@ -73,6 +73,12 @@ export default function App() {
 
 [![Edit webcomponent-test-react](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/webcomponent-test-react-w7lyv?fontsize=14&hidenavigation=1&theme=dark)
 
+**Set the counter number by pass `defaultcount` attribute**
+
+```html
+<claps-button size="3rem" defaultcount="5"></claps-button>
+```
+
 **Change emoji is also possible**
 
 ```html
