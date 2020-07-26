@@ -19,7 +19,9 @@ export class MyComponent {
 
   handleClick(e) {
     e.stopPropagation();
-    this.count = this.count + 1;
+    if (this.count < 20) {
+      this.count = this.count + 1;
+    }
     this.clapDone.emit({ count: this.count });
     if (this.preserve) {
       localStorage.setItem(`claps-wc-${location.pathname}`, `${this.count}`);
