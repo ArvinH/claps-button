@@ -120,10 +120,10 @@ export class MyComponent {
             height: this.size || '3rem',
             fontSize: this.size || '3rem',
             textShadow: `1px 0px ${(
-              this.count < 20 ? this.count : 20
+              this.innerCount < 20 ? this.innerCount : 20
             ).toFixed(2)}px red`,
             filter: `grayscale(${(
-              1 - this.count / 20
+              1 - this.innerCount / 20
             ).toFixed(2)})`
           }}
         >
