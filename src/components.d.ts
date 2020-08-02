@@ -10,6 +10,7 @@ export namespace Components {
         "color": string;
         "defaultcount": number;
         "emoji": string;
+        "innercount": number;
         "preserve": boolean;
         "size": string;
     }
@@ -30,6 +31,7 @@ declare namespace LocalJSX {
         "color"?: string;
         "defaultcount"?: number;
         "emoji"?: string;
+        "innercount"?: number;
         "onClapDone"?: (event: CustomEvent<any>) => void;
         "preserve"?: boolean;
         "size"?: string;

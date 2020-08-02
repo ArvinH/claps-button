@@ -8,25 +8,34 @@ import { Component, Element, Event, EventEmitter, Prop, State, Listen, Watch, h,
 export class MyComponent {
   @Element() el: HTMLElement;
   @State() count: number = 0;
+  @State() innerCount: number = 0;
   @Prop() color: string;
   @Prop() size: string;
   @Prop() emoji: string;
   @Prop() preserve: boolean;
   @Prop() defaultcount: number;
+  @Prop() innercount: number;
   @Event() clapDone: EventEmitter;
+
   @Watch('defaultcount')
-  watchHandler(newValue: number) {
+  defaultCountWatchHandler(newValue: number) {
     this.count = newValue;
+  }
+
+  @Watch('innercount')
+  innerCountWatchHandler(newValue: number) {
+    this.innerCount = newValue;
   }
 
   @Listen('click', { capture: true })
 
   handleClick(e) {
     e.stopPropagation();
-    if (this.count < 20) {
-      this.count = this.count + 1;
+    if (this.innerCount < 20) {
+      this.innerCount = this.innerCount + 1;
+      this.clapDone.emit({ count: this.count });
     }
-    this.clapDone.emit({ count: this.count });
+    this.count = this.count + 1;
     if (this.preserve) {
       localStorage.setItem(`claps-wc-${location.pathname}`, `${this.count}`);
     }
