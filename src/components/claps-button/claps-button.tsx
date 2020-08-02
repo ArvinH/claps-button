@@ -1,4 +1,4 @@
-import { Component, Element, Event, EventEmitter, Prop, State, Listen, h, Host } from '@stencil/core';
+import { Component, Element, Event, EventEmitter, Prop, State, Listen, Watch, h, Host } from '@stencil/core';
 
 @Component({
   tag: 'claps-button',
@@ -14,6 +14,10 @@ export class MyComponent {
   @Prop() preserve: boolean;
   @Prop() defaultcount: number;
   @Event() clapDone: EventEmitter;
+  @Watch('defaultcount')
+  watchHandler(newValue: number) {
+    this.count = newValue;
+  }
 
   @Listen('click', { capture: true })
 
