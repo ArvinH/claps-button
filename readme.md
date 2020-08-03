@@ -83,6 +83,8 @@ export default function App() {
 
 This will only trigger `clapDone` when counter is between `0` to `9`.
 
+You can use it with `innercount`. `innercount` control how many claps you've already clap. However, `innercount` won't work on initial load, you have to dynamic set the value.
+
 **Set the counter number by pass `defaultcount` attribute**
 
 ```html
