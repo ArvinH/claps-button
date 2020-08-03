@@ -15,6 +15,7 @@ export class MyComponent {
   @Prop() preserve: boolean;
   @Prop() defaultcount: number;
   @Prop() innercount: number;
+  @Prop() eventlimit: number = 20;
   @Event() clapDone: EventEmitter;
 
   @Watch('defaultcount')
@@ -31,7 +32,7 @@ export class MyComponent {
 
   handleClick(e) {
     e.stopPropagation();
-    if (this.innerCount < 20) {
+    if (this.innerCount < this.eventlimit) {
       this.innerCount = this.innerCount + 1;
       this.clapDone.emit({ count: this.count });
     }
@@ -120,10 +121,10 @@ export class MyComponent {
             height: this.size || '3rem',
             fontSize: this.size || '3rem',
             textShadow: `1px 0px ${(
-              this.innerCount < 20 ? this.innerCount : 20
+              this.innerCount < this.eventlimit ? this.innerCount : this.eventlimit
             ).toFixed(2)}px red`,
             filter: `grayscale(${(
-              1 - this.innerCount / 20
+              1 - this.innerCount / this.eventlimit
             ).toFixed(2)})`
           }}
         >

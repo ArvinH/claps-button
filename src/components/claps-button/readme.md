@@ -12,6 +12,7 @@
 | `color`        | `color`        |             | `string`  | `undefined` |
 | `defaultcount` | `defaultcount` |             | `number`  | `undefined` |
 | `emoji`        | `emoji`        |             | `string`  | `undefined` |
+| `eventlimit`   | `eventlimit`   |             | `number`  | `20`        |
 | `innercount`   | `innercount`   |             | `number`  | `undefined` |
 | `preserve`     | `preserve`     |             | `boolean` | `undefined` |
 | `size`         | `size`         |             | `string`  | `undefined` |

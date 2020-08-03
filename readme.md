@@ -73,6 +73,14 @@ export default function App() {
 
 [![Edit webcomponent-test-react](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/webcomponent-test-react-w7lyv?fontsize=14&hidenavigation=1&theme=dark)
 
+**Set the `eventlimit` to control how many custom event you want to trigger**
+
+```html
+<claps-button size="3rem" eventlimit="10"></claps-button>
+```
+
+This will only trigger `clapDone` when counter is between `0` to `9`.
+
 **Set the counter number by pass `defaultcount` attribute**
 
 ```html
