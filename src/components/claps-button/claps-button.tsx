@@ -34,9 +34,9 @@ export class MyComponent {
     e.stopPropagation();
     if (this.innerCount < this.eventlimit) {
       this.innerCount = this.innerCount + 1;
+      this.count = this.count + 1;
       this.clapDone.emit({ count: this.count });
     }
-    this.count = this.count + 1;
     if (this.preserve) {
       localStorage.setItem(`claps-wc-${location.pathname}`, `${this.count}`);
     }
