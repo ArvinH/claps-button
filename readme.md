@@ -79,6 +79,8 @@ export default function App() {
 <claps-button size="3rem" eventlimit="10"></claps-button>
 ```
 
+[![Edit webcomponent-test-react-limit-event](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/webcomponent-test-react-limit-event-vl7fk?fontsize=14&hidenavigation=1&theme=dark)
+
 This will only trigger `clapDone` when counter is between `0` to `9`.
 
 **Set the counter number by pass `defaultcount` attribute**
